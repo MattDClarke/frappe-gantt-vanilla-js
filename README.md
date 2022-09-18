@@ -1,0 +1,1 @@
+# Frappe Gantt - vanilla JavaScript
