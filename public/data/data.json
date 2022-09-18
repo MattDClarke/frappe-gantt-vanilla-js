@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1",
+    "name": "Set up database",
+    "start": "2022-10-01",
+    "end": "2022-10-10",
+    "progress": 100
+  },
+  {
+    "id": "2",
+    "name": "Create Figma design",
+    "start": "2022-10-01",
+    "end": "2022-10-13",
+    "progress": 100
+  },
+  {
+    "id": "3",
+    "name": "Create component library",
+    "start": "2022-10-14",
+    "end": "2022-10-27",
+    "progress": 100,
+    "dependencies": "2"
+  },
+  {
+    "id": "4",
+    "name": "Create API endpoints",
+    "start": "2022-10-28",
+    "end": "2022-11-07",
+    "progress": 90,
+    "dependencies": "3"
+  },
+  {
+    "id": "5",
+    "name": "Set up test strategy",
+    "start": "2022-11-08",
+    "end": "2022-11-10",
+    "progress": 10,
+    "dependencies": "4",
+    "custom_class": "is-important"
+  }
+]
