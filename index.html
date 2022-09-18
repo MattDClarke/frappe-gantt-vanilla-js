@@ -25,6 +25,76 @@
         <h1 class="chart-label">Gantt Tracker</h1>
         <svg id="gantt"></svg>
       </div>
+      <div id="controls-container">
+        <form id="add-task">
+          <h2>Add task</h2>
+          <label for="task-name">Task name</label>
+          <input id="task-name" name="task-name" required />
+
+          <label for="start-date">Start date</label>
+          <input
+            type="date"
+            id="start-date"
+            name="start-date"
+            value="2022-11-08"
+            min="2022-01-01"
+            max="2050-12-31"
+          />
+          <label for="end-date">End date</label>
+          <input
+            type="date"
+            id="end-date"
+            name="end-date"
+            value="2022-11-10"
+            min="2022-01-01"
+            max="2050-12-31"
+          />
+
+          <label for="progress">Progress (%)</label>
+          <input
+            type="number"
+            id="progress"
+            name="progress"
+            value="0"
+            min="0"
+            max="100"
+          />
+          <div class="important-checkbox-container">
+            <label for="is-important">Is it an important task?</label>
+            <input type="checkbox" id="is-important" name="is-important" />
+          </div>
+          <fieldset class="tasks-checkbox-container">
+            <legend>Dependencies</legend>
+          </fieldset>
+          <button>Add</button>
+        </form>
+
+        <form id="delete-tasks">
+          <h2>Delete tasks</h2>
+          <fieldset class="tasks-checkbox-container">
+            <legend>Tasks</legend>
+          </fieldset>
+          <small class="delete-msg">
+            The Gantt chart can't have no tasks. See this
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/frappe/gantt/issues/84"
+            >
+              Frappe Gantt GitHub issue</a
+            >.
+          </small>
+          <button>Delete</button>
+        </form>
+
+        <div class="chart-controls">
+          <h2>Tracker Time Range</h2>
+          <div class="button-container">
+            <button id="day-btn">Day</button>
+            <button id="week-btn">Week</button>
+            <button id="month-btn">Month</button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
