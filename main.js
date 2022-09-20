@@ -50,11 +50,11 @@ async function fetchData() {
     (error) => {
       showErrorMsg();
     },
-    hideloader()
+    hideLoader()
   );
 }
 
-function hideloader() {
+function hideLoader() {
   document.getElementsByClassName("loading")[0].style.display = "none";
 }
 
