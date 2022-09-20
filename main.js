@@ -162,21 +162,21 @@ function deleteTasks(e) {
     msgEl.style.display = "block";
     return;
   }
-  const depIds = [];
-  taskCheckboxes.forEach((dep) => {
-    if (dep.checked) {
-      depIds.push(dep.id);
+  const taskIds = [];
+  taskCheckboxes.forEach((task) => {
+    if (task.checked) {
+      taskIds.push(task.id);
     }
   });
-  if (depIds.length === 0) return;
-  if (depIds.length === tasks.length) {
+  if (taskIds.length === 0) return;
+  if (taskIds.length === tasks.length) {
     msgEl.style.display = "block";
     return;
   }
 
   // remove deleted tasks
   const filteredTasks = tasks.filter((task) => {
-    if (!depIds.includes(task.id)) {
+    if (!taskIds.includes(task.id)) {
       return true;
     }
     msgEl.style.display = "none";
@@ -190,7 +190,7 @@ function deleteTasks(e) {
 
     const depsArr = tsk.dependencies;
     const newDeps = depsArr.filter((dep) => {
-      if (!depIds.includes(dep)) {
+      if (!taskIds.includes(dep)) {
         return true;
       }
     });
