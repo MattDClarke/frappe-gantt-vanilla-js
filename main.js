@@ -179,7 +179,6 @@ function deleteTasks(e) {
     if (!taskIds.includes(task.id)) {
       return true;
     }
-    msgEl.style.display = "none";
   });
 
   // remove deleted dependencies
@@ -204,6 +203,7 @@ function deleteTasks(e) {
   tasks = newTasks;
   ganttChart.refresh(tasks);
   addTaskCheckboxes();
+  msgEl.style.display = "none";
 }
 
 function updateDate(task, start, end) {
